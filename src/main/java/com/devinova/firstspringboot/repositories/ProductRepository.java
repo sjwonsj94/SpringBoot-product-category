@@ -1,18 +1,23 @@
 package com.devinova.firstspringboot.repositories;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.devinova.firstspringboot.entities.Product;
 
-@Component
-public class ProductRepository {
+//import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.List;
+//import java.util.Map;
 
-	public static Map<Long, Product> map = new HashMap<>();
+
+public interface ProductRepository extends JpaRepository<Product, Long>{
+		
+	}
+
+	
+
+
+/*public static Map<Long, Product> map = new HashMap<>();
 	
 	public void save(Product Product) {
 		map.put(Product.getId(), Product);
@@ -23,8 +28,4 @@ public class ProductRepository {
 	}
 	
 	public List<Product> findAll(){
-		return new ArrayList<Product>(map.values());
-	}
-
-	
-}
+		return new ArrayList<Product>(map.values());*/
